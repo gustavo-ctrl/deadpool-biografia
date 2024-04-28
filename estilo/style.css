@@ -1,71 +1,67 @@
-@charset "UTF-8" ;
+@charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 :root {
    --fonte1: verdana, geneva, tahoma, sans-serif;
-   --fonte2: 'passion one', cursive;
+   --fonte2: 'Passion One', cursive;
    --fonte3: 'Sriracha', cursive;
 }
 
-
- * {
+* {
     margin: 0px;
     padding: 0px;
     font-size: 1em;
- }
+}
 
- html, body {
+html, body {
     min-height: 100vh;
     background-color: darkgray;
     font-family: var(--fonte1);
+}
 
- }
-
- header {
+header {
     background-color: rgba(0, 0, 0, 0.733);
     color: white;
     text-align: center; 
-    
- }
+}
 
- header > h1 {
+header > h1 {
     padding-top: 20px;
     font-variant: small-caps;
     font-family: var(--fonte2);
     font-size: 4vw;
- }
+}
 
- header > p {
+header > p {
     padding-bottom: 30px;
- }
+}
 
- header a, footer a {
+header a, footer a {
     color: white;
     text-decoration: none;
     font-weight: bold;
- }
+}
 
- header a:hover, footer a:hover {
+header a:hover, footer a:hover {
     text-decoration: underline;
- }
+}
 
- section {
+section {
     padding-top: 5vh;
     padding-bottom: 5vh;
     line-height: 2em;
     padding-left: 20px;
     font-family: var(--fonte3);
     font-size: 1.5vw;
- }
+}
 
- section > p {
+section > p {
     padding-bottom: 5px;
- }
+}
 
- section.deadpool {
+section.deadpool {
     background-color: rgba(0, 0, 0, 0.705);
     color: white;
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.616);
@@ -78,13 +74,12 @@ section.deadpool > p {
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.76);
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.795);
-
 }
-
 
 section#img01 {
     background-image: url('../imagens/deadpool.jpg');
     background-position: right center;
+    background-size: cover; /* Assegura que a imagem de fundo cubra todo o espaço disponível */
 }
 
 footer {
@@ -92,5 +87,24 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    header > h1 {
+        font-size: 6vw; /* Ajusta o tamanho para telas menores */
+    }
+    section {
+        font-size: 3vw; /* Aumenta a legibilidade */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Define um tamanho mínimo de fonte */
+    }
+    header > h1 {
+        font-size: 8vw; /* Ajusta ainda mais o tamanho para telas muito pequenas */
+    }
 }
 
